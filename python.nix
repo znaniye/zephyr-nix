@@ -12,7 +12,8 @@ let
   packageOverrides = self: super: {
     # HACK: Zephyr uses pypi to install non-Python deps
     clang-format = clang-tools;
-    inherit gitlint;
+
+    gitlint-core = gitlint;
 
     # Nixpkgs has incorrect canonical naming
     python-can = super.python-can or self.can;
